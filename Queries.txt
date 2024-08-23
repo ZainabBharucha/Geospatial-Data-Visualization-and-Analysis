@@ -1,0 +1,33 @@
+The queries I run for obtaining the convex hull and nearest neighbors are as follows:
+
+1. CREATE EXTENSION POSTGIS;
+
+2. create table locations(name varchar, geom geometry)
+
+3. INSERT INTO locations VALUES
+    ('Home', 'POINT(-118.2883333 34.03084722)'),
+    ('Starbucks USC Village', 'POINT(-118.2844444 34.02444444)'),
+    ('Drnk Cafe', 'POINT(-118.2841667 34.03194444)'),
+    ('Starbucks Leavey', 'POINT(-118.2825 34.02138889)'),
+    ('Viterbi School', 'POINT(-118.2888889 34.02083333)'),
+    ('Marshall School', 'POINT(-118.2852778 34.01861111)'),
+    ('Sol Price School', 'POINT(-118.2836111 34.01944444)'),
+    ('Emergency phone 1', 'POINT(-118.2905556 34.01972222)'),
+    ('Emergency phone 2', 'POINT(-118.2875 34.02333333)'),
+    ('Emergency phone 3', 'POINT(-118.2858333 34.02555556)'),
+    ('Generations Fountain', 'POINT(-118.2833333 34.02222222)'),
+    ('Fubon Fountain', 'POINT(-118.285 34.02527778)'),
+    ('Patsy and Forrest Shumway Fountain', 'POINT(-118.2852778 34.02027778)');
+
+4. select name, ST_AsText(geom) from Locations;
+
+5. SELECT ST_AsText(ST_ConvexHull(ST_Collect(geom))) FROM Locations;
+
+6. select name, ST_AsText(geom) from Locations;
+
+7. SELECT name, ST_Distance(home.geom, l.geom) AS distance
+    FROM locations AS l, 
+    (SELECT geom FROM locations WHERE name = 'Home') AS home   
+    WHERE l.name <> 'Home'
+    ORDER BY distance ASC
+    LIMIT 4;

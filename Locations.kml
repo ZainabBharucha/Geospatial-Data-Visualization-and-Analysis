@@ -1,0 +1,123 @@
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name>Home</name>
+      <Point>
+        <coordinates>-118.2883333,34.03084722,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Starbucks USC Village</name>
+      <Point>
+        <coordinates>-118.2844444,34.02444444,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Drnk Cafe</name>
+      <Point>
+        <coordinates>-118.2841667,34.03194444,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Starbucks Leavey</name>
+      <Point>
+        <coordinates>-118.2825,34.02138889,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Viterbi School</name>
+      <Point>
+        <coordinates>-118.2888889,34.02083333,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Marshall School</name>
+      <Point>
+        <coordinates>-118.2852778,34.01861111,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sol Price School</name>
+      <Point>
+        <coordinates>-118.2836111,34.01944444,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Emergency phone 1</name>
+      <Point>
+        <coordinates>-118.2905556,34.01972222,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Emergency phone 2</name>
+      <Point>
+        <coordinates>-118.2875,34.02333333,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Emergency phone 3</name>
+      <Point>
+        <coordinates>-118.2858333,34.02555556,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Generations Fountain</name>
+      <Point>
+        <coordinates>-118.2833333,34.02222222,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fubon Fountain</name>
+      <Point>
+        <coordinates>-118.285,34.02527778,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Patsy and Forrest Shumway Fountain</name>
+      <Point>
+        <coordinates>-118.2852778,34.02027778,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <Style>
+        <LineStyle>
+          <color>ffff7d53</color>
+        </LineStyle>
+        <PolyStyle>
+          <color>80fe4d28</color>
+        </PolyStyle>
+      </Style>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>-118.2852778,34.01861111 -118.2905556,34.01972222 -118.2883333,34.03084722 -118.2841667,34.03194444 -118.2825,34.02138889 -118.2836111,34.01944444 -118.2852778,34.01861111</coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark>
+      <name>Line Home to Drnk Cafe</name>
+      <LineString>
+        <coordinates>-118.2883333,34.03084722 -118.2841667,34.03194444</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Line Home to Emergency phone 3</name>
+      <LineString>
+        <coordinates>-118.2883333,34.03084722 -118.2858333,34.02555556</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Line Home to Fubon Fountain</name>
+      <LineString>
+        <coordinates>-118.2883333,34.03084722 -118.285,34.02527778</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Line Home to Starbucks USC Village</name>
+      <LineString>
+        <coordinates>-118.2883333,34.03084722 -118.2844444,34.02444444</coordinates>
+      </LineString>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>OL</title>
+<script src="https://openlayers.org/api/OpenLayers.js">
+</script>
+<style>
+#map {
+    width: 600px;
+    height:600px;
+}
+</style>
+</head>
+
+<body>
+<div id="map"></div>
+
+
+<script>
+
+var locations = [
+{lat:34.03084722,  long:-118.2883333},   // somewhere in SoCal...
+{lat:34.02444444,  long:-118.2844444}, // somewhere in SoCal...
+{lat:34.03194444,  long:-118.2841667}, // somewhere in SoCal...
+{lat: 34.02138889,  long:-118.2825}, // somewhere in SoCal...
+{lat:34.02083333,  long:-118.2888889}, // somewhere in SoCal...
+{lat:34.01861111, long:-118.2852778},  // somewhere in SoCal...
+{lat:34.01944444,   long:-118.2836111}, // somewhere in SoCal...
+{lat:34.01972222,  long:-118.2905556}, // somewhere in SoCal...
+{lat:34.02333333, long:-118.2875},  // somewhere in SoCal...
+{lat:34.02555556, long:-118.2858333},  // somewhere in SoCal...
+{lat:34.02527778, long:-118.285},  // somewhere in SoCal...
+{lat:34.02027778, long:-118.2852778} // somewhere in SoCal...
+];
+
+localStorage.setItem("myData",JSON.stringify(locations));
+
+var dataStored = JSON.parse(localStorage.getItem("myData"));
+console.log(dataStored); 
+
+var a = dataStored.k1; 
+for(var indx in a) { 
+  console.log(a[indx]); 
+}
+
+function initMap() {
+        map = new OpenLayers.Map('map');
+        basemap = new OpenLayers.Layer.OSM("Simple OSM Map");
+        map.addLayer(basemap);
+        markers = new OpenLayers.Layer.Markers("Markers");
+        map.addLayer(markers);
+}// initMap()
+
+function addMarker(latitude, longitude) {
+        var lonLat = new OpenLayers.LonLat(longitude, latitude)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), 
+                map.getProjectionObject() 
+        );
+        var point = new OpenLayers.Marker(lonLat);
+        markers.addMarker(point);
+        map.setCenter(lonLat,18); 
+}
+
+initMap();
+
+for(var i = 0; i < locations.length; i++) {
+    addMarker(locations[i].lat,locations[i].long);         
+}
+
+</script>
+
+
+</body>
+
+</html>
+
